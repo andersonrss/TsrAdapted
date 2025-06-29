@@ -1,16 +1,16 @@
 This is a customized version of [TripoSR](https://github.com/VAST-AI-Research/TripoSR), including possible fixes and minor extensions to support reproducibility and evaluation. 
 
-## 🔧 Key Modifications
+## Key Modifications
 
-- ✅ **Fixed cross-device (CPU/GPU) tensor inconsistencies.**
-- 🖼️ **Resolved issues in the `--bake-texture` pipeline** to enable textured mesh generation.
-- 📏 **Added 2D quality evaluation metrics**:
+- **Fixed cross-device (CPU/GPU) tensor inconsistencies.**
+- **Resolved issues in the `--bake-texture` pipeline** to enable textured mesh generation.
+- **Added 2D quality evaluation metrics**:
   - PSNR (Peak Signal-to-Noise Ratio)  
   - SSIM (Structural Similarity Index)  
   - LPIPS (Learned Perceptual Image Patch Similarity)
-- 📊 **Integrated PyTorch Profiler** for layer-wise performance and memory profiling.
+- **Integrated PyTorch Profiler** for layer-wise performance and memory profiling.
 
-## ⚙️ Installation Note
+## Installation Note
 
 If you encounter the following error during installation:
 
