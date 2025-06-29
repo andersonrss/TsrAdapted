@@ -48,10 +48,6 @@ Where:
 
 The outputs include PSNR, SSIM, and LPIPS scores for each pair, exported as a .CSV file.
 
-```sh
-pip install git+https://github.com/tatsy/torchmcubes.git@3aef8afa5f21b113afc4f4ea148baee850cbd472
-```
-
 ## Installation Note
 
 If you encounter the following error during installation:
