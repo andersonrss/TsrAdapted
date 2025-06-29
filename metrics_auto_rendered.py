@@ -150,4 +150,6 @@ if __name__ == "__main__":
         writer.writerow([])
         writer.writerow(["Média", mean_psnr, mean_ssim, mean_lpips])
 
+    # Path to the CSV file
     print(f"\nResults saved in {args.csv_path}")
+    print('\n')

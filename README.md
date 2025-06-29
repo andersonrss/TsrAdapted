@@ -32,7 +32,7 @@ The script will automatically render a frame of each 3D object in `--obj-dir` an
 
 - **Manual Metric Evaluation**
 
-For manual metric evaluation, you must manually capture frames of the reconstructed objects in another software and place them in the specified directory (benchmark/reconstructed) before running the script. After that, run:
+For manual metric evaluation, you must manually capture frames of the reconstructed objects using a 3D viewer or external software, and place them in the specified directory (`--obj_dir`) before running the script. After that, run:
 
 ```bash
 python metrics_manual_rendered.py --ref_dir benchmark/reference --obj_dir benchmark/reconstructed
