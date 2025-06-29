@@ -1,4 +1,4 @@
-This is a customized version of [TripoSR](https://github.com/VAST-AI-Research/TripoSR), including possible fixes and minor extensions to support reproducibility and evaluation. 
+This is a customized version of [TripoSR](https://github.com/VAST-AI-Research/TripoSR), including possible fixes and minor extensions to support reproducibility and evaluation. The model can be executed in the same way as described in the original repository, with no changes required to the inference pipeline. 
 
 ## Key Modifications
 
