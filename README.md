@@ -1,4 +1,8 @@
-This is a customized version of [TripoSR](https://github.com/VAST-AI-Research/TripoSR), including possible fixes and minor extensions to support reproducibility and evaluation. The model can be executed in the same way as described in the original repository, with no changes required to the inference pipeline. 
+This is a customized version of [TripoSR](https://github.com/VAST-AI-Research/TripoSR), including possible fixes and minor extensions to support reproducibility and evaluation. The model can be executed in the same way as described in the original repository, with no changes required to the inference pipeline. Some additional packages are used to perform a specific task. If a package is required by the command line, simply install it using:
+
+```bash
+pip install <package_name>
+```
 
 ## Key Modifications
 

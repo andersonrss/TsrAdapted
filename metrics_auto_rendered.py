@@ -13,6 +13,12 @@ import argparse
 import os
 import csv
 
+# -----------------------------------------------------------------------------
+# This script renders .obj 3D mesh files into images using Open3D, then compares
+# the rendered images to reference images using PSNR, SSIM, and LPIPS metrics.
+# It processes multiple pairs of .obj files and reference images, saves the
+# rendered outputs, and logs the metric results in a CSV file.
+# -----------------------------------------------------------------------------
 
 # .obj rendering function using Open3D in order to generate an image from a 3D mesh
 def render_obj_from_view(obj_path, img_reference_path, output_img_path):
