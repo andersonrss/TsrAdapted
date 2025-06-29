@@ -171,8 +171,9 @@ for i, image in enumerate(images):
         profile_memory=True, record_shapes=True) as prof:
         with torch.no_grad():
             scene_codes = model([image], device=device)
+    print(prof.key_averages().table(sort_by="cuda_time_total", row_limit=10)) 
     timer.end("Running model")
-    #print(prof.key_averages().table(sort_by="cuda_time_total", row_limit=10)) 
+
 
     # Scene rendering
     # n_views: 30 images taken from different angles around the object
