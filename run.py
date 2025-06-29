@@ -18,6 +18,14 @@ from tsr.system import TSR
 from tsr.utils import remove_background, resize_foreground, save_video
 from tsr.bake_texture import bake_texture
 
+# -----------------------------------------------------------------------------
+# This script performs 3D reconstruction from one or more input images using a
+# pretrained TripoSR model.
+# The script saves the resulting meshes (OBJ or GLB), textures, and rendered images
+# or videos to the specified output directory. It also provides timing information
+# for each major processing step.
+# -----------------------------------------------------------------------------
+
 
 # Timer class to measure execution time of different parts of the code
 class Timer:
@@ -43,7 +51,6 @@ class Timer:
         logging.info(f"{name} finished in {t:.2f}{self.time_unit}.")
 
 timer = Timer()
-
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -140,6 +147,7 @@ timer.end("Initializing model")
 timer.start("Processing images")
 images = []
 
+# If background removal
 if args.no_remove_bg:
     rembg_session = None
 else:
@@ -166,6 +174,7 @@ for i, image in enumerate(images):
     logging.info(f"Running image {i + 1}/{len(images)} ...")
 
     # Scene inference by the model, returns a list of scene codes
+    # Profiler is used to measure VRAM usage
     timer.start("Running model")
     with profile(activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
         profile_memory=True, record_shapes=True) as prof:
@@ -175,7 +184,7 @@ for i, image in enumerate(images):
     timer.end("Running model")
 
 
-    # Scene rendering
+    # Scene video rendering
     # n_views: 30 images taken from different angles around the object
     if args.render:
         timer.start("Rendering")

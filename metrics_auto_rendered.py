@@ -20,6 +20,7 @@ import csv
 # rendered outputs, and logs the metric results in a CSV file.
 # -----------------------------------------------------------------------------
 
+
 # .obj rendering function using Open3D in order to generate an image from a 3D mesh
 def render_obj_from_view(obj_path, img_reference_path, output_img_path):
     img_ref = Image.open(img_reference_path).convert("RGB")

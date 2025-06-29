@@ -13,6 +13,12 @@ import argparse
 import os
 import csv
 
+# -----------------------------------------------------------------------------
+# This script compares pairs of rendered and reference images using PSNR, SSIM,
+# and LPIPS metrics. It processes all image pairs from two directories, computes
+# the metrics for each pair, prints the results, and saves them in a CSV file.
+# -----------------------------------------------------------------------------
+
 
 # LPIPS calculation
 def LPIPS(img_path_1, img_path_2):
