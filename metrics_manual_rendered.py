@@ -112,3 +112,5 @@ if __name__ == "__main__":
             writer.writerow([r["pair"], r["psnr"], r["ssim"], r["lpips"]])
         writer.writerow([])
         writer.writerow(["Med", mean_psnr, mean_ssim, mean_lpips])
+
+    print(f"\nResults saved in {args.csv_path}")

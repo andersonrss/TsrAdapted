@@ -150,4 +150,4 @@ if __name__ == "__main__":
         writer.writerow([])
         writer.writerow(["Média", mean_psnr, mean_ssim, mean_lpips])
 
-    print(f"\nResultados salvos em {args.csv_path}")
+    print(f"\nResults saved in {args.csv_path}")
