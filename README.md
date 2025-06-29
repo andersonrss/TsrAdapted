@@ -28,7 +28,7 @@ python metrics_auto_rendered.py --obj_dir benchmark/objs --ref_dir benchmark/ref
 
 `--out_dir` is the output directory of rendered images.
 
-The script will automatically render a frame of each 3D object in `--obj-dir` and compare it to its corresponding ground truth image from the reference directory `--ref-dir`. The outputs include PSNR, SSIM, and LPIPS scores for each pair, exported as a .CSV file. Reference images and reconstructed objetcs must follow the same order and naming convention to ensure correct metric calculation. 
+The script will automatically render a frame of each 3D object in `--obj-dir` and compare it to its corresponding ground truth image from the reference directory `--ref-dir`. The outputs include PSNR, SSIM, and LPIPS scores for each pair, exported as a .CSV file. Reference images and reconstructed objects must follow the same order and naming convention to ensure correct metric calculation. 
 
 - **Manual Metric Evaluation**
 
@@ -40,13 +40,11 @@ python metrics_manual_rendered.py --ref_dir benchmark/reference --obj_dir benchm
 
 Where:
 
-
 `--ref_dir` is the directory containing the reference images (ground truth).
 
 `--obj_dir` is the directory with manually object rendered images.
 
-
-The outputs include PSNR, SSIM, and LPIPS scores for each pair, exported as a .CSV file.
+The outputs include PSNR, SSIM, and LPIPS scores for each pair, exported as a .CSV file. Reference images and manually framed objetcs must follow the same order and naming convention to ensure correct metric calculation. 
 
 ## Installation Note
 
